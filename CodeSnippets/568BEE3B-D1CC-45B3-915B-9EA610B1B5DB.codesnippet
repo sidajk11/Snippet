@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>marknibview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class SKZStakingCenterSnkrzView: UIView, NibLoadable {
+    
+    // MARK: - Variables
+    var selectActionHandler: (() -&gt; Void)? = nil
+    
+    // MARK: - IBOutlets
+    @IBOutlet var contentView: UIView!
+    
+    // MARK: - Variables
+    @IBAction func actionButton(_ sender: UIButton) {
+        selectActionHandler?()
+    }
+    
+    // MARK: - Initialize
+    convenience init() {
+        self.init(frame: .zero)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        commonInit()
+    }
+}
+
+// MARK: - Private functions
+extension SKZStakingCenterSnkrzView {
+    private func commonInit() {
+        Bundle.main.loadNibNamed(type(of: self).nibName, owner: self, options: nil)
+        
+        addSubview(contentView)
+        contentView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        contentView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    }
+    
+    func load() {
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>568BEE3B-D1CC-45B3-915B-9EA610B1B5DB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>marknibview</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

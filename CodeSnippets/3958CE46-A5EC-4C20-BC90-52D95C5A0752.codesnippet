@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>marksample</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class showVC: SKZBaseViewController {
+    // MARK: - Variables
+    
+    // MARK: - IBOutlets
+    
+    // MARK: - IBActions
+    
+    // MARK: - View life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
+
+// MARK: - Private functions
+extension showVC {
+    
+}
+
+// MARK: - Update UI
+extension showVC {
+}
+
+// MARK: - Requests
+extension showVC {
+    
+}
+
+// MARK: - Extension UIViewController for show SKZBaseViewController
+extension UIViewController {
+    /// 비밀번호 재설정 열기
+    func showVC() {
+        guard let vc = UIStoryboard(name: "", bundle: nil).instantiateViewController(withIdentifier: "") as? SKZBaseViewController, let navigation = navigationController else {
+            return
+        }
+        navigation.pushViewController(vc, animated: true)
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3958CE46-A5EC-4C20-BC90-52D95C5A0752</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>marksample</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
